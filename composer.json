@@ -1,0 +1,16 @@
+{
+    "name": "amani/new_club",
+    "authors": [
+        {
+            "name": "manuel-spec",
+            "email": "amaniase084@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "models\\": "models/",
+            "controllers\\": "controllers/"
+        }
+    }
+}
