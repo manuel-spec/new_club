@@ -23,20 +23,22 @@
     <?php }
     ?>
     <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-        <span class="inline-flex">
-            <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-blue-600 hover:text-blue-500 focus:outline-none transition duration-150 ease-in-out">
-                Login
-            </a>
-        </span>
+        <?php if (!isset($_SESSION['username'])) { ?>
+            <span class="inline-flex">
+                <a href="/../../views/auth/Login.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-blue-600 hover:text-blue-500 focus:outline-none transition duration-150 ease-in-out">
+                    Login
+                </a>
+            </span>
+        <?php } ?>
         <?php if (isset($_SESSION['username'])) { ?>
             <span class="inline-flex">
-                <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-red-600 hover:text-blue-500 focus:outline-none transition duration-150 ease-in-out">
+                <a href="/../../views/auth/Login.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-red-600 hover:text-blue-500 focus:outline-none transition duration-150 ease-in-out">
                     Logout
                 </a>
             </span>
         <?php } ?>
         <span class="inline-flex rounded-md shadow ml-2">
-            <a href="/signup" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out">
+            <a href="/../../views/auth/Signup.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out">
                 Get started
             </a>
         </span>

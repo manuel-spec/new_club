@@ -13,7 +13,7 @@ require("views/partials/head.php"); ?>
         </p>
         <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div class="rounded-md shadow">
-                <a class="w-full text-white flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md  bg-green-600 hover:bg-green-500 md:py-5  md:text-2xl md:px-10" href="#">Get started</a>
+                <a class="w-full text-white flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md  bg-green-600 hover:bg-green-500 md:py-5  md:text-2xl md:px-10" href="views/auth/Signup.php">Get started</a>
             </div>
 
         </div>
