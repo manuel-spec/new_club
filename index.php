@@ -1,7 +1,16 @@
 <?php
+
+use controllers\Router;
+
 $title = "Welcome to the Club ";
 require("views/partials/head.php"); ?>
-<?php require("views/partials/nav.php"); ?>
+<?php require("views/partials/nav.php");
+require("vendor/autoload.php");
+$router = new Router();
+$router->get("", "");
+
+?>
+
 <div class="pt-16 pb-8 mx-auto max-w-5xl px-4 sm:pt-24">
     <div class="text-center">
         <h1 class="text-5xl tracking-tight font-extrabold sm:text-5xl pb-3 md:pb-0 md:text-6xl">
