@@ -2,13 +2,22 @@
 
 namespace controllers;
 
+use controllers\LoginController;
+
 class Router
 {
     public function get($route, $controller)
     {
-        echo "<pre>";
-        var_dump($_SERVER['REQUEST_URI']);
-        var_dump($_SERVER['REQUEST_METHOD']);
-        echo "</pre>";
+        if ($_SERVER['REQUEST_METHOD'] == "GET") {
+            if ($_SERVER['REQUEST_URI'] == "login") {
+                $loginController = new LoginController();
+            }
+        }
     }
+    // public function post()
+    // {
+    // }
+    // public function put()
+    // {
+    // }
 }
